@@ -19,7 +19,7 @@ public class CreateAccountStep {
 
     @Step
     public void existingAccountMessage(){
-        createAccountPage.waitForCondition().until(ExpectedConditions.invisibilityOfElementLocated(createAccountPage.mensajeCuentaExistente));
+        createAccountPage.waitForCondition().until(ExpectedConditions.visibilityOfElementLocated(createAccountPage.mensajeCuentaExistente));
 
     }
 }

@@ -25,7 +25,6 @@ public class Data {
         return password;
     }
 
-    public String getTextBienvenido() {
-        return textBienvenido;
-    }
+
+
 }

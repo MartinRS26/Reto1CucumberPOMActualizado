@@ -17,6 +17,8 @@ import net.thucydides.core.annotations.Steps;
 import java.util.List;
 
 public class VerificacionStepDefinition {
+
+
     @Steps
     HomeStep homeStep;
 
@@ -34,15 +36,16 @@ public class VerificacionStepDefinition {
     @When("^input registration data$")
     public void inputRegistrationData(List<Data> dataList) throws InterruptedException {
         createAccountStep.createNewAccount(dataList.get(0));
-        Thread.sleep(3000);
+
         createAccountStep.existingAccountMessage();
+        Thread.sleep(3000);
 
 
     }
     @Then("^the text of the welcome offer would be$")
-    public void theTextOfTheWelcomeOfferWouldBe (List<Data> dataList) throws InterruptedException {
+    public void theTextOfTheWelcomeOfferWouldBe () throws InterruptedException {
 
-        loginStep.textoOfertaBienvenida(dataList.get(0));
+        loginStep.textoOfertaBienvenida();
         Thread.sleep(3000);
 
     }
